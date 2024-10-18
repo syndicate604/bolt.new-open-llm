@@ -37,7 +37,7 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository (if you haven't already):
 
 ```bash
-git clone https://github.com/coleam00/bolt.new-any-llm.git
+git clone [https://github.com/syndicate604/bolt.new-open-llm/]
 ```
 
 2. Install dependencies:
