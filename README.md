@@ -81,15 +81,17 @@ When you add a new model to the MODEL_LIST array, it will immediately be availab
 - `npm run typegen`: Generates TypeScript types using Wrangler.
 - `npm run deploy`: Builds the project and deploys it to Cloudflare Pages.
 
-## Development
+## Running Bolt
 
-To start the development server:
+Everytime you change the MODELS you need to run 'npm run build' or the models will not change.  
+'npm run dev' will not work without Google Canary so instead run 'npm run start' this will run the full Bolt in Linux Chrome with Vite.
 
 ```bash
-npm run dev
+npm run build
+npm run start 
 ```
 
-This will start the Remix Vite development server. You will need Google Chrome Canary to run this locally! It's a very easy install and a good browser for web development anyway.
+This will first rebuild and then start the Vite server. You will need Google Chrome Canary for DEV only (WINDOWS/MAC), to run this locally! It's a very easy install and a good browser for web development anyway. Otherwise just run the program. 
 
 ## Tips and Tricks
 
