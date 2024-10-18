@@ -1,6 +1,6 @@
 [![Bolt.new: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index.jpg)](https://bolt.new)
 
-# Bolt.new Fork by Cole Medin
+# Bolt.new Fork
 
 This fork of bolt.new allows you to choose the LLM that you use for each prompt! Currently you can use OpenAI, Anthropic, Ollama, or Groq models - and it is easily extended to use any other model supported by the Vercel AI SDK! See instructions below for running this locally and extending to include more models.
 
@@ -30,7 +30,7 @@ For developers interested in building their own AI-powered development tools wit
 Before you begin, ensure you have the following installed:
 
 - Node.js (v20.15.1)
-- pnpm (v9.4.0)
+- npm (v9.4.0)
 
 ## Setup
 
@@ -43,7 +43,7 @@ git clone https://github.com/coleam00/bolt.new-any-llm.git
 2. Install dependencies:
 
 ```bash
-pnpm install
+npm install
 ```
 
 3. Rename `.env.example` to .env.local and add your LLM API keys (you only have to set the ones you want to use and Ollama doesn't need an API key because it runs locally on your computer):
@@ -72,21 +72,21 @@ When you add a new model to the MODEL_LIST array, it will immediately be availab
 
 ## Available Scripts
 
-- `pnpm run dev`: Starts the development server.
-- `pnpm run build`: Builds the project.
-- `pnpm run start`: Runs the built application locally using Wrangler Pages. This script uses `bindings.sh` to set up necessary bindings so you don't have to duplicate environment variables.
-- `pnpm run preview`: Builds the project and then starts it locally, useful for testing the production build. Note, HTTP streaming currently doesn't work as expected with `wrangler pages dev`.
-- `pnpm test`: Runs the test suite using Vitest.
-- `pnpm run typecheck`: Runs TypeScript type checking.
-- `pnpm run typegen`: Generates TypeScript types using Wrangler.
-- `pnpm run deploy`: Builds the project and deploys it to Cloudflare Pages.
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the project.
+- `npm run start`: Runs the built application locally using Wrangler Pages. This script uses `bindings.sh` to set up necessary bindings so you don't have to duplicate environment variables.
+- `npm run preview`: Builds the project and then starts it locally, useful for testing the production build. Note, HTTP streaming currently doesn't work as expected with `wrangler pages dev`.
+- `npm test`: Runs the test suite using Vitest.
+- `npm run typecheck`: Runs TypeScript type checking.
+- `npm run typegen`: Generates TypeScript types using Wrangler.
+- `npm run deploy`: Builds the project and deploys it to Cloudflare Pages.
 
 ## Development
 
 To start the development server:
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 This will start the Remix Vite development server. You will need Google Chrome Canary to run this locally! It's a very easy install and a good browser for web development anyway.
