@@ -90,8 +90,15 @@ Everytime you change the MODELS you need to run 'npm run build' or the models wi
 npm run build
 npm run start 
 ```
+Hit the [b] Key for open BROWSER 
 
-This will first rebuild and then start the Vite server. You will need Google Chrome Canary for DEV only (WINDOWS/MAC), to run this locally! It's a very easy install and a good browser for web development anyway. Otherwise just run the program. 
+![image](https://github.com/user-attachments/assets/175078b5-ee01-4bfb-bcf9-e9b51ec90d07)
+
+
+This will first rebuild and then start the Vite server. You will need Google Chrome Canary for DEV only (WINDOWS/MAC), to run this locally! It's a very easy install and a good browser for web development anyway. Otherwise just run the program.
+
+![bolt_1st_page](https://github.com/user-attachments/assets/e4f55b3f-3042-4803-93c3-319da9937da5)
+
 
 ## Tips and Tricks
 
