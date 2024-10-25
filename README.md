@@ -1,7 +1,3 @@
-[![Bolt.new: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index.jpg)](https://bolt.new)
-
-# Bolt.new Fork by Cole Medin
-
 This fork of Bolt.new allows you to choose the LLM that you use for each prompt! Currently, you can use OpenAI, Anthropic, Ollama, OpenRouter, Gemini, or Groq models - and it is easily extended to use any other model supported by the Vercel AI SDK! See the instructions below for running this locally and extending it to include more models.
 
 # Requested Additions to this Fork - Feel Free to Contribute!!
@@ -36,7 +32,7 @@ This fork of Bolt.new allows you to choose the LLM that you use for each prompt!
 
 # Bolt.new: AI-Powered Full-Stack Web Development in the Browser
 
-Bolt.new is an AI-powered web development agent that allows you to prompt, run, edit, and deploy full-stack applications directly from your browser—no local setup required. If you're here to build your own AI-powered web dev agent using the Bolt open source codebase, [click here to get started!](./CONTRIBUTING.md)
+Bolt.new is an AI-powered web development agent that allows you to prompt, run, edit, and deploy full-stack applications directly from your browser—no local setup required. If you're here to build your own AI-powered web dev agent using the Bolt open source codebase, 
 
 ## What Makes Bolt.new Different
 
