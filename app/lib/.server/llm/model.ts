@@ -58,7 +58,10 @@ export function getGroqModel(apiKey: string, model: string) {
 }
 
 export function getOllamaModel(baseURL: string, model: string) {
-  let Ollama = ollama(model);
+  let Ollama = ollama(model, {
+    numCtx: 32768,
+  });
+
   Ollama.config.baseURL = `${baseURL}/api`;
   return Ollama;
 }
@@ -80,8 +83,25 @@ export function getOpenRouterModel(apiKey: string, model: string) {
   return openRouter.chat(model);
 }
 
-export function getModel(provider: string, model: string, env: Env) {
-  const apiKey = getAPIKey(env, provider);
+export function getLMStudioModel(baseURL: string, model: string) {
+  const lmstudio = createOpenAI({
+    baseUrl: `${baseURL}/v1`,
+    apiKey: "",
+  });
+
+  return lmstudio(model);
+}
+
+export function getXAIModel(apiKey: string, model: string) {
+  const openai = createOpenAI({
+    baseURL: 'https://api.x.ai/v1',
+    apiKey,
+  });
+
+  return openai(model);
+}
+export function getModel(provider: string, model: string, env: Env, apiKeys?: Record<string, string>) {
+  const apiKey = getAPIKey(env, provider, apiKeys);
   const baseURL = getBaseURL(env, provider);
 
   switch (provider) {
@@ -94,13 +114,17 @@ export function getModel(provider: string, model: string, env: Env) {
     case 'OpenRouter':
       return getOpenRouterModel(apiKey, model);
     case 'Google':
-      return getGoogleModel(apiKey, model)
+      return getGoogleModel(apiKey, model);
     case 'OpenAILike':
       return getOpenAILikeModel(baseURL,apiKey, model);
     case 'Deepseek':
-      return getDeepseekModel(apiKey, model)
+      return getDeepseekModel(apiKey, model);
     case 'Mistral':
       return  getMistralModel(apiKey, model);
+    case 'LMStudio':
+      return getLMStudioModel(baseURL, model);
+    case 'xAI':
+      return getXAIModel(apiKey, model);
     default:
       return getOllamaModel(baseURL, model);
   }
